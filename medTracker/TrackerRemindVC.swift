@@ -32,11 +32,95 @@ class TrackerRemindVC: UIViewController {
     var currentDate = ""
     
     let defaults = NSUserDefaults.standardUserDefaults()
-    
+    // "✔︎" "✘"
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if let dateRecorded = defaults.stringForKey("storedDate") {
+            storedDate = dateRecorded
+        }
+        
+        currentDate = getDate()
+        if currentDate == storedDate{
+            
+            if let _ = defaults.stringForKey("takenMorning") {
+                switchMorning.setOn(true, animated: true)
+                xMorning.text = "✔︎"
+                xMorning.textColor = UIColor.greenColor()
+            }
+            
+            if let _ = defaults.stringForKey("takenAfternoon") {
+                switchAfternoon.setOn(true, animated: true)
+                xAfternoon.text = "✔︎"
+                xAfternoon.textColor = UIColor.greenColor()
+            }
+            
+            if let _ = defaults.stringForKey("takenEvening") {
+                switchEvening.setOn(true, animated: true)
+                xEvening.text = "✔︎"
+                xEvening.textColor = UIColor.greenColor()
+            }
+            
+            if let _ = defaults.stringForKey("takenBedtime") {
+                switchBedtime.setOn(true, animated: true)
+                xBedtime.text = "✔︎"
+                xBedtime.textColor = UIColor.greenColor()
+            }
+            
+        } else if currentDate != storedDate {
+            
+            defaults.removeObjectForKey("takenMorning")
+            defaults.removeObjectForKey("takenAfternoon")
+            defaults.removeObjectForKey("takenEvening")
+            defaults.removeObjectForKey("takenBedtime")
+            
+            switchMorning.setOn(false, animated: true)
+            switchAfternoon.setOn(false, animated: true)
+            switchEvening.setOn(false, animated: true)
+            switchBedtime.setOn(false, animated: true)
+            
+            xMorning.text = "✘"
+            xMorning.textColor = UIColor.redColor()
+            
+            xAfternoon.text = "✘"
+            xAfternoon.textColor = UIColor.redColor()
+            
+            xEvening.text = "✘"
+            xEvening.textColor = UIColor.redColor()
+            
+            xBedtime.text = "✘"
+            xBedtime.textColor = UIColor.redColor()
+            
+            // For local notification switches
+            
+            if let _ = defaults.stringForKey("reminderMorning") {
+                switchReminderMorning.setOn(true, animated: true)
+                xReminderMorning.text = "✔︎"
+                xReminderMorning.textColor = UIColor.greenColor()
+            }
+            
+            if let _ = defaults.stringForKey("reminderAfternoon") {
+                switchReminderAfternoon.setOn(true, animated: true)
+                xReminderAfternoon.text = "✔︎"
+                xReminderAfternoon.textColor = UIColor.greenColor()
+            }
+            
+            if let _ = defaults.stringForKey("reminderEvening") {
+                switchReminderEvening.setOn(true, animated: true)
+                xReminderEvening.text = "✔︎"
+                xReminderEvening.textColor = UIColor.greenColor()
+            }
+            
+            if let _ = defaults.stringForKey("reminderBedtime") {
+                switchReminderBedtime.setOn(true, animated: true)
+                xReminderBedtime.text = "✔︎"
+                xReminderBedtime.textColor = UIColor.greenColor()
+            }
+            
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -249,7 +333,6 @@ class TrackerRemindVC: UIViewController {
         
     }
   
-    
 }
 
 
