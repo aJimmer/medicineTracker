@@ -14,33 +14,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d6t-sb-v2R">
-                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="BfC-sw-U48" detailTextLabel="ejt-7K-WsB" imageView="QAb-0t-pgL" style="IBUITableViewCellStyleSubtitle" id="1Yv-Zx-0Cc">
-                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Yv-Zx-0Cc" id="ffp-ug-29L">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BfC-sw-U48">
-                                            <rect key="frame" x="73" y="5" width="32" height="20"/>
+                                            <rect key="frame" x="73" y="1" width="39" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ejt-7K-WsB">
-                                            <rect key="frame" x="73" y="25" width="41" height="14"/>
+                                            <rect key="frame" x="73" y="25" width="50" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="medical" id="QAb-0t-pgL">
@@ -88,11 +81,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark_grey" translatesAutoresizingMaskIntoConstraints="NO" id="sQ1-on-e99">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check the meds that you've taken today." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6c-9m-5TV">
                                 <rect key="frame" x="20" y="72" width="560" height="35"/>
                                 <constraints>
@@ -114,6 +102,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DbO-W1-eaT">
                                 <rect key="frame" x="128" y="115" width="51" height="31"/>
+                                <connections>
+                                    <action selector="morningSwitchTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="0BA-cy-LIx"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnE-A0-ywf">
                                 <rect key="frame" x="185" y="118" width="24" height="26"/>
@@ -135,6 +126,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X8j-X5-aBJ">
                                 <rect key="frame" x="128" y="154" width="51" height="31"/>
+                                <connections>
+                                    <action selector="afternoonSwitchTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="tn0-gc-tyG"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTh-PT-WCv">
                                 <rect key="frame" x="185" y="157" width="24" height="26"/>
@@ -153,6 +147,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="h5Y-em-tWg">
                                 <rect key="frame" x="128" y="193" width="51" height="31"/>
+                                <connections>
+                                    <action selector="eveningSwitchTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="7GA-56-2uy"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8S-9v-Ydb">
                                 <rect key="frame" x="185" y="196" width="24" height="26"/>
@@ -171,6 +168,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KSL-Hw-yeM">
                                 <rect key="frame" x="128" y="232" width="51" height="31"/>
+                                <connections>
+                                    <action selector="bedtimeSwitchTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sc8-WI-TGY"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emn-Ui-GEN">
                                 <rect key="frame" x="185" y="235" width="24" height="26"/>
@@ -195,6 +195,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hQ3-il-w3k">
                                 <rect key="frame" x="128" y="314" width="51" height="31"/>
+                                <connections>
+                                    <action selector="morningReminderTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="921-tx-oR3"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwb-Oi-zG9">
                                 <rect key="frame" x="185" y="317" width="24" height="26"/>
@@ -213,6 +216,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iC6-df-Ars">
                                 <rect key="frame" x="128" y="353" width="51" height="31"/>
+                                <connections>
+                                    <action selector="afternoonReminderTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="Q1O-HK-9U7"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUR-gO-maT">
                                 <rect key="frame" x="185" y="356" width="24" height="26"/>
@@ -231,6 +237,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Shf-V9-cj1">
                                 <rect key="frame" x="128" y="392" width="51" height="31"/>
+                                <connections>
+                                    <action selector="eveningReminderTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="O65-HZ-KXd"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHI-L6-JYA">
                                 <rect key="frame" x="185" y="395" width="24" height="26"/>
@@ -249,6 +258,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VZg-5j-8Cv">
                                 <rect key="frame" x="128" y="431" width="51" height="31"/>
+                                <connections>
+                                    <action selector="bedtimeReminderTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="exp-If-giV"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✘" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdc-1k-HRD">
                                 <rect key="frame" x="185" y="434" width="24" height="26"/>
@@ -256,6 +268,11 @@
                                 <color key="textColor" red="0.79124599360000003" green="0.0" blue="0.0074074515660000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dark_grey" translatesAutoresizingMaskIntoConstraints="NO" id="sQ1-on-e99">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.69999999999999996" height="1"/>
@@ -344,6 +361,24 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Track / Remind" id="9D2-Nh-r5b"/>
+                    <connections>
+                        <outlet property="switchAfternoon" destination="X8j-X5-aBJ" id="HvY-vN-Nbh"/>
+                        <outlet property="switchBedtime" destination="KSL-Hw-yeM" id="Qpk-dN-yk0"/>
+                        <outlet property="switchEvening" destination="h5Y-em-tWg" id="bYW-8g-p9m"/>
+                        <outlet property="switchMorning" destination="DbO-W1-eaT" id="QaT-LL-28n"/>
+                        <outlet property="switchReminderAfternoon" destination="iC6-df-Ars" id="hue-R2-LWK"/>
+                        <outlet property="switchReminderBedtime" destination="VZg-5j-8Cv" id="gzB-J1-z53"/>
+                        <outlet property="switchReminderEvening" destination="Shf-V9-cj1" id="uEe-Y6-va2"/>
+                        <outlet property="switchReminderMorning" destination="hQ3-il-w3k" id="C7j-Y6-Mzf"/>
+                        <outlet property="xAfternoon" destination="HTh-PT-WCv" id="T6c-xT-thZ"/>
+                        <outlet property="xBedtime" destination="emn-Ui-GEN" id="nDb-0S-UkG"/>
+                        <outlet property="xEvening" destination="a8S-9v-Ydb" id="NFL-iL-5WD"/>
+                        <outlet property="xMorning" destination="YnE-A0-ywf" id="192-7d-Dcw"/>
+                        <outlet property="xReminderAfternoon" destination="cUR-gO-maT" id="moS-ky-vWC"/>
+                        <outlet property="xReminderBedtime" destination="zdc-1k-HRD" id="BBd-Jo-RZo"/>
+                        <outlet property="xReminderEvening" destination="eHI-L6-JYA" id="reN-e8-mju"/>
+                        <outlet property="xReminderMorning" destination="dwb-Oi-zG9" id="w2k-Ls-1Zy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -407,6 +442,9 @@
                                     <segment title="Bedtime"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="timeSelectorDidChange:" destination="MeP-V3-Wjl" eventType="valueChanged" id="1DW-qc-egD"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

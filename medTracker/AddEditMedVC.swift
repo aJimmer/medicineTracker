@@ -81,10 +81,57 @@ class AddEditMedVC: UIViewController, UITextFieldDelegate {
 
     @IBAction func saveTapped(sender: AnyObject) {
         
+        if newMed == nil {
+            addMed()
+        } else {
+            editMed()
+        }
         
-        
+        dismissVC()
     }
 
+    func addMed() {
+        
+        let entity = NSEntityDescription.entityForName("Medicine", inManagedObjectContext: moc)
+        
+        let newMed = Medicine(entity: entity!, insertIntoManagedObjectContext: moc)
+        
+        newMed.name = medName.text
+        newMed.dosage = medDosage.text
+        newMed.time = timeToTake
+        
+        do {
+            try moc.save()
+        } catch {
+            return
+        }
+    }
     
-
+    func editMed() {
+        
+        newMed?.name = medName.text!
+        newMed?.dosage = medDosage.text!
+        
+        switch medTime {
+        case "Morning":
+            medTime.selectedSegmentIndex = 0
+        case "Afternoon":
+            medTime.selectedSegmentIndex = 1
+        case "Evening":
+            medTime.selectedSegmentIndex = 2
+        case "Bedtime":
+            medTime.selectedSegmentIndex = 3
+        default:
+            break;
+        }
+        
+        newMed?.time = timeToTake
+        
+        do {
+            try moc.save()
+        } catch {
+            return
+        }
+        
+    }
 }

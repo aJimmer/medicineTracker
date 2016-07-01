@@ -84,7 +84,7 @@ class MainTVC: UITableViewController, NSFetchedResultsControllerDelegate {
         let dosage = med.dosage
         let time = med.time
         
-        cell.detailTextLabel?.text = "\(dosage!)mg. at \(time)"
+        cell.detailTextLabel?.text = "\(dosage!)mg. at \(time!)"
         
         return cell
     }
